@@ -55,7 +55,14 @@ class Login {
             loggedInUser = user;
             return true;
         }
-        return false;
+        return false;  
+    }
+    
+     public boolean isLoggedIn() {
+        return loggedInUser != null;
+    }
+     public String getCurrentUsername() {
+        return loggedInUser != null ? loggedInUser.getUsername() : null;
     }
 
     public String returnLoginStatus(boolean loginSuccess) {
